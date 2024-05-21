@@ -1,0 +1,75 @@
+@import "mixins"
+  
+.ContentCard
+  display: flex
+  flex-direction: column
+  justify-content: center
+  max-width: 100vw
+  @include medium
+    max-width: 50vw
+  @include large
+    max-width: 33vw
+  max-height: 800px
+  border-radius: 1.375rem
+  align-items: center
+  border-radius: 1rem
+  margin-bottom: 20px
+  &__imageContainer
+    position: relative
+    max-width: 90%
+    width: 90%
+    height: 300px
+    & > img
+      object-fit: cover
+      border-radius: 1rem
+      box-shadow: 0 0 4rem rgba(255, 255, 255, 0.2)
+  &__profilePicContainer
+    position: relative
+    width: 30px
+    height: 30px
+    & > img
+      object-fit: cover
+      border-radius: 15px
+  &__contentContainer
+    max-width: 100vw
+    padding: 0 5% 0 5%
+  &__contentHeader
+    display: flex
+    justify-content: space-between
+    margin-top: 10px
+  &__title
+    font-size: 15px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0
+    padding: 0
+    text-transform: uppercase
+  &__subtitle
+    font-size: 13px
+    margin-top: 5px
+    padding: 0
+  &__author
+    font-size: 13px
+    margin-top: 0
+    padding: 0
+  &__contentTextContainer
+    margin-bottom: 10px
+  &__contentText
+    color: $text-color
+    margin-bottom: 0
+    &--truncate
+      color: $text-color
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      line-clamp: 2
+      -webkit-box-orient: vertical
+      overflow: hidden
+      margin-bottom: 0
+  &__button
+    color: $color-secondary
+    margin: 0
+    padding: 0
+    background: transparent
+    border: none
+    cursor: pointer
+    height: 48px
